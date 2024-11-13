@@ -10,3 +10,12 @@ jobs:
     steps:
       - run: echo hello world
       - run: pwd
+      - run: sleep 100
+  anotherjob:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 200
+  anotheranotherjob:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 50
