@@ -12,9 +12,16 @@ jobs:
       - run: pwd
       - uses: nicruo/novemberactionrepo@main
 
-  deploy:
+  deploydev:
+    runs-on: ubuntu-latest
+    environment: dev
+    needs: firstjob
+    steps:
+      - run: echo app deployed
+
+  deployprod:
     runs-on: ubuntu-latest
     environment: prod
-    needs: firstjob
+    needs: deploydev
     steps:
       - run: echo app deployed
