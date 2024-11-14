@@ -8,6 +8,12 @@ on:
         type: boolean
 
 jobs:
+  selfhostedjob:
+    runs-on: self-hosted
+    steps:
+      - run: echo hello world
+      - run: pwd
+
   firstjob:
     runs-on: ubuntu-latest
     steps:
