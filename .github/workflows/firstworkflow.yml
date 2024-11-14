@@ -11,3 +11,9 @@ jobs:
       - run: echo hello world
       - run: pwd
       - uses: nicruo/novemberactionrepo@main
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: firstjob
+    steps:
+      - run: echo app deployed
